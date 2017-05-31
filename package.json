@@ -1,0 +1,30 @@
+{
+  "name": "cordova-plugin-proguard",
+  "version": "1.0.0",
+  "description": "Cordova plugin for ProGuard",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greybax/cordova-plugin-proguard.git"
+  },
+  "keywords": [
+    "proguard",
+    "android",
+    "optimize",
+    "shrink",
+    "minify",
+    "obfuscate",
+    "tool",
+    "cordova",
+    "plugin"
+  ],
+  "author": {
+    "name": "Aleksandr Filatov",
+    "email": "greybax@gmail.com",
+    "url": "https://alfilatov.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/greybax/cordova-plugin-proguard/issues"
+  },
+  "homepage": "https://github.com/greybax/cordova-plugin-proguard#readme"
+}
