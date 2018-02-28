@@ -14,6 +14,9 @@
 #-dontoptimize
 #-dontobfuscate
 
+
+#-printconfiguration config.txt
+
 # If your project uses WebView with JS, uncomment the following
 # and specify the fully qualified class name to the JavaScript interface
 # class:
@@ -25,14 +28,14 @@
 #-injars      libs
 #-outjars     bin/classes-processed.jar
 
-# Using Google's License Verification Library 
+# Using Google's License Verification Library
 -keep class com.android.vending.licensing.ILicensingService
 
-# Specifies to write out some more information during processing. 
+# Specifies to write out some more information during processing.
 # If the program terminates with an exception, this option will print out the entire stack trace, instead of just the exception message.
 -verbose
 
-# Annotations are represented by attributes that have no direct effect on the execution of the code. 
+# Annotations are represented by attributes that have no direct effect on the execution of the code.
 -keepattributes *Annotation*
 
 -keepclassmembers enum * {
@@ -46,8 +49,8 @@
     <fields>;
 }
 
-# These options let obfuscated applications or libraries produce stack traces that can still be deciphered later on 
--renamesourcefileattribute SourceFile    
+# These options let obfuscated applications or libraries produce stack traces that can still be deciphered later on
+-renamesourcefileattribute SourceFile
 -keepattributes SourceFile,LineNumberTable
 
 # Enable proguard with Cordova
@@ -110,3 +113,50 @@
 -dontwarn android.support.v4.**
 -dontwarn android.net.SSLCertificateSocketFactory
 -dontwarn android.net.http.*
+
+### your bank ###
+
+-dontwarn com.google.android.gms.common.api.internal.BasePendingResult.**
+-dontwarn com.google.android.**
+
+-keep class com.google.android.gms.maps.** { *; }
+-keep interface com.google.android.gms.maps.** { *; }
+
+-keep class com.wikitude.**
+-keep class com.wikitude.architect.** { *; }
+-keep class com.wikitude.common.** { *; }
+
+-keep class com.google.android.glass.** { *; }
+-keep class plugin.google.maps.** { *; }
+-keep class com.google.protobuf.** { *; }
+-keep class com.google.**
+-dontwarn com.google.**
+
+-dontnote com.google.protobuf.**
+-dontnote com.google.android.gms.internal.**
+
+### Google Play Services ###
+
+-keep class * extends java.util.ListResourceBundle {
+    protected java.lang.Object[][] getContents();
+}
+
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+    @com.google.android.gms.common.annotation.KeepName *;
+}
+
+-keepnames class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+-keep class android.content.pm.PackageInstaller.**
+-keep class com.google.android.gms.** { *; }
+-keep class com.google.** { *; }
+-dontwarn com.google.android.gms.**
+
+### End Google Play Services ###
