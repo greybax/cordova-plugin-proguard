@@ -135,12 +135,6 @@
 -dontnote com.google.protobuf.**
 -dontnote com.google.android.gms.internal.**
 
-## NOTE: Should be actual project package name
-
--keep class com.cr2.mobile.BuildConfig { *; }
-
-## https://stackoverflow.com/questions/45938239/cordova-and-proguard-camera-plugin-npe-on-takepicture
-
 ### Google Play Services ###
 
 -keep class * extends java.util.ListResourceBundle {
