@@ -110,3 +110,34 @@
 -dontwarn android.support.v4.**
 -dontwarn android.net.SSLCertificateSocketFactory
 -dontwarn android.net.http.*
+
+#CUSTOMISATION######################################################################################
+-printconfiguration app-config.txt
+
+-verbose
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclassmembers
+-dontoptimize
+-dontpreverify
+
+#duplicate definition of library class
+-dontnote org.apache.http.**
+
+#Google services####################################################################################
+-keep class com.google.android.gms.** { *; }
+-dontwarn com.google.android.gms.**
+
+## GSON 2.2.4 specific rules #######################################################################
+
+# Gson uses generic type information stored in a class file when working with fields. Proguard
+# removes such information by default, so configure it to keep all of it.
+-keepattributes Signature
+
+# For using GSON @Expose annotation
+-keepattributes *Annotation*
+
+-keepattributes EnclosingMethod
+
+# Gson specific classes
+-keep class sun.misc.Unsafe { *; }
+-keep class com.google.gson.stream.** { *; }
