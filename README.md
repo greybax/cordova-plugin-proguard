@@ -21,6 +21,10 @@ You can read more about it on [ProGuard official website](https://www.guardsquar
 
 You can also to check out some [Android ProGuard snippets](https://github.com/krschultz/android-proguard-snippets)
 
+## History
+ - v1.0.0 - supports Cordova version <7
+ - v2.0.0 - supports Cordova version 7+ (thanks to @SujitSingh)
+
 ## License
 
 MIT © [Aleksandr Filatov](https://alfilatov.com)
