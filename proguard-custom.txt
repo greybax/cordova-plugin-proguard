@@ -110,3 +110,6 @@
 -dontwarn android.support.v4.**
 -dontwarn android.net.SSLCertificateSocketFactory
 -dontwarn android.net.http.*
+
+-keep class com.ionicframework.cordova.webview.** { *; }
+-keep class com.ionicframework.cordova.webview.**
