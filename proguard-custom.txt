@@ -113,3 +113,67 @@
 
 -keep class com.ionicframework.cordova.webview.** { *; }
 -keep class com.ionicframework.cordova.webview.**
+
+-keep class com.google.protobuf.zzc
+-keep class com.google.protobuf.zzd
+-keep class com.google.protobuf.zze
+
+-keep class com.google.android.gms.dynamic.IObjectWrapper
+-keep class com.google.android.gms.internal.zzuq
+-keep class com.google.android.gms.internal.oo
+-keep class com.google.android.gms.internal.oh
+-keep class com.google.android.gms.internal.zzcgl
+-keep class com.google.android.gms.internal.ql
+-keep class com.google.android.gms.internal.zzcem
+-keep class com.google.android.gms.tagmanager.zzce
+-keep class com.google.android.gms.tagmanager.zzcn
+-keep class com.google.android.gms.plus.PlusOneButton$OnPlusOneClickListener
+-keep class com.google.android.gms.measurement.AppMeasurement$zza
+-keep class com.google.android.gms.measurement.AppMeasurement$OnEventListener
+-keep class com.google.android.gms.measurement.AppMeasurement$EventInterceptor
+
+-keep class com.google.android.gms.ads.mediation.MediationAdRequest
+-keep class com.google.android.gms.ads.mediation.MediationBannerListener
+-keep class com.google.android.gms.ads.AdSize
+-keep class com.google.android.gms.ads.mediation.MediationInterstitialListener
+-keep class com.google.android.gms.ads.mediation.MediationNativeListener
+-keep class com.google.android.gms.ads.reward.mediation.MediationRewardedVideoAdListener
+-keep class com.google.android.gms.ads.InterstitialAd
+-keep class com.google.android.gms.ads.AdListener
+-keep class com.google.android.gms.ads.Correlator
+-keep class com.google.android.gms.ads.formats.NativeAd
+-keep class com.google.android.gms.ads.mediation.NativeMediationAdRequest
+-keep class com.google.android.gms.ads.formats.MediaView
+-keep class com.google.android.gms.ads.formats.AdChoicesView
+-keep class com.google.android.gms.ads.mediation.NativeMediationAdRequest
+-keep class com.google.android.gms.ads.VideoOptions
+-keep class com.google.android.gms.ads.doubleclick.OnCustomRenderedAdLoadedListener
+-keep class com.google.android.gms.ads.mediation.customevent.CustomEventInterstitialListener
+-keep class com.google.android.gms.ads.doubleclick.AppEventListener
+-keep class com.google.android.gms.ads.mediation.customevent.CustomEventBannerListener
+-keep class com.google.android.gms.ads.mediation.customevent.CustomEventNativeListener
+-keep class com.google.android.gms.ads.mediation.customevent.CustomEventExtras
+
+-keep class com.google.ads.mediation.MediationServerParameters
+-keep class com.google.ads.mediation.NetworkExtras
+-keep class com.google.ads.mediation.MediationInterstitialListener
+-keep class com.google.ads.mediation.customevent.CustomEventServerParameters
+-keep class com.google.ads.mediation.MediationBannerListener
+-keep class com.google.ads.AdSize
+-keep class com.google.ads.mediation.MediationAdRequest
+-keep class com.google.ads.mediation.customevent.CustomEventBannerListener
+-keep class com.google.ads.mediation.customevent.CustomEventInterstitialListener
+
+-keep class com.google.firebase.FirebaseApp
+-keep class com.google.firebase.database.connection.idl.zzah
+-keep class com.google.firebase.database.connection.idl.zzq
+-keep class com.google.firebase.database.connection.idl.zzw
+-keep class com.google.firebase.database.connection.idl.zzk
+
+-dontnote com.google.protobuf.zzc
+-dontnote com.google.protobuf.zzd
+-dontnote com.google.protobuf.zze
+-dontnote com.google.android.gms.internal.q
+-dontnote com.google.android.gms.internal.zzcem
+
+-keep class com.google.android.gms.cast.framework.OptionsProvider
