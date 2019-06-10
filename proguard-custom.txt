@@ -1,4 +1,4 @@
-# To enable ProGuard in your project, edit project.properties
+# To enable ProGuard in your project, edit project.properties v2?
 # to define the proguard.config property as described in that file.
 # Add project specific ProGuard rules here.
 # By default, the flags in this file are appended to flags specified
@@ -110,3 +110,43 @@
 -dontwarn android.support.v4.**
 -dontwarn android.net.SSLCertificateSocketFactory
 -dontwarn android.net.http.*
+
+
+# These clases contain references to google maps
+
+-keep class plugin.google.maps.** { *; }
+-keep public class * extends plugin.google.maps.MyPlugin
+-keepclassmembers public class plugin.google.maps.GoogleMaps {*; }
+-keepclassmembers public class * extends plugin.google.maps.MyPlugin { *; }
+
+# References with google services
+
+-keep class org.gradle.api.** { *; }
+-keep interface org.gradle.api.** { *; }
+
+-keep class groovy.lang.** { *; }
+-keep interface groovy.lang.** { *; }
+
+-keep class sun.misc.** { *; }
+-keep interface sun.misc.** { *; }
+
+-keep class org.codehaus.groovy.runtime.** { *; }
+-keep interface org.codehaus.groovy.runtime.** { *; }
+
+-keep class org.codehaus.groovy.reflection.** { *; }
+-keep interface org.codehaus.groovy.reflection.** { *; }
+
+-keep class com.google.gson.** { *; }
+-keep interface com.google.gson.** { *; }
+
+# JSR 305 annotations are for embedding nullability information.
+-dontwarn javax.annotation.**
+
+# A resource is loaded with a relative path so the package of this class must be preserved.
+-keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
+
+# Animal Sniffer compileOnly dependency to ensure APIs are compatible with older versions of Java.
+-dontwarn org.codehaus.mojo.animal_sniffer.*
+
+# OkHttp platform used only on JVM and when Conscrypt dependency is available.
+-dontwarn okhttp3.internal.platform.ConscryptPlatform
