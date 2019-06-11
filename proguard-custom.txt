@@ -110,3 +110,7 @@
 -dontwarn android.support.v4.**
 -dontwarn android.net.SSLCertificateSocketFactory
 -dontwarn android.net.http.*
+
+# These clases contain references to cordova webView
+-keep class com.ionicframework.cordova.webview.** {*; }
+-keep class com.ionicframework.cordova.webview.*
