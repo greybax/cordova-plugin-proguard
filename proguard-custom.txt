@@ -111,14 +111,6 @@
 -dontwarn android.net.SSLCertificateSocketFactory
 -dontwarn android.net.http.*
 
-
-# These clases contain references to google maps
-
--keep class plugin.google.maps.** { *; }
--keep public class * extends plugin.google.maps.MyPlugin
--keepclassmembers public class plugin.google.maps.GoogleMaps {*; }
--keepclassmembers public class * extends plugin.google.maps.MyPlugin { *; }
-
 # These clases contain references to cordova webView
 -keep class com.ionicframework.cordova.webview.** {*; }
 -keep class com.ionicframework.cordova.webview.*
