@@ -28,6 +28,10 @@ You can also to check out some [Android ProGuard snippets](https://github.com/kr
  - v1.0.0 - supports Cordova version <7
  - v2.0.0 - supports Cordova version 7+ (thanks to @SujitSingh)
 
+## Why I've done this plugin?
+
+https://alfilatov.com/posts/how-to-setup-proguard-in-cordova-application/
+
 ## License
 
 MIT © [Aleksandr Filatov](https://alfilatov.com)
