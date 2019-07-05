@@ -1,7 +1,7 @@
 android {
   buildTypes {
     debug {
-      minifyEnabled true
+      minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'src/main/assets/www/proguard-custom.txt'
     }
     release {
