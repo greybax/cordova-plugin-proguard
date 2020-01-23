@@ -24,6 +24,13 @@ You can read more about it on [ProGuard official website](https://www.guardsquar
 
 You can also to check out some [Android ProGuard snippets](https://github.com/krschultz/android-proguard-snippets)
 
+_**Please note**_: you should remove and re-add Android platform after changing `plugins/cordova-plugin-proguard/proguard-custom.txt`
+
+```
+ionic cordova platform rm android
+ionic cordova platform add android
+```
+
 ## History
  - v1.0.0 - supports Cordova version <7
  - v2.0.0 - supports Cordova version 7+ (thanks to @SujitSingh)
