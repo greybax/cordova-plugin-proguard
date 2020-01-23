@@ -4,7 +4,9 @@
   <description>Activated ProGuard for Android</description>
 
   <platform name="android">
+    <preference name="HAS_BILLING" />
     <framework src="build.gradle" custom="true" type="gradleReference" />
     <asset src="proguard-custom.txt" target="proguard-custom.txt" />
+    <hook type="before_plugin_install" src="scripts/androidBeforeInstall.js" />
   </platform>
 </plugin>
