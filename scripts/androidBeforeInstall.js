@@ -1,31 +1,22 @@
-// adding options to proguard-custom file
+// adding options from project-custom file in platformpath to default proguard-custom file in pluginpath
 let fs = require('fs');
 let path = require('path');
 
 module.exports = function (ctx) {
-  let pluginDir = ctx.opts.plugin.dir;
-  let proguardFile = path.join(pluginDir, 'proguard-custom.txt');
-  let keepBillingContent = '-keep class com.android.vending.billing.** { *; }\n';
-  let searchArr = process.argv;//get cordova command line arguments
-  let getPreferenceValue = function (name) {
-    let found = searchArr.find(element => element.indexOf(name + '=') > -1);
-    if (!found) {
-      return false;
+  const projectRoot = ctx.opts.projectRoot;
+  const pluginDir = ctx.opts.plugin.dir;
+  const targetProguardFile = path.join(pluginDir, 'proguard-custom.txt');
+  const projectProguardFile = path.join(projectRoot, 'proguard-custom.txt');
+  
+  try {
+    if (fs.existsSync(projectProguardFile)) {
+      const data = fs.readFileSync(projectProguardFile, 'utf8');
+      fs.appendFileSync(targetProguardFile, data);
+      console.log('Added optional proguard-rules to proguardFile.');
+    } else {
+      console.log('No optional proguard-custom.txt found in projectRoot: ' + projectRoot);
     }
-    let val = found.split('=')[1];
-    if (val === 'true') {
-      return true;
-    }
-    return false;
-  };
-
-  let addToProguard = function (str) {
-    fs.appendFileSync(proguardFile, str);
-  };
-
-  let HAS_BILLING = getPreferenceValue('HAS_BILLING');
-  if (HAS_BILLING) {
-    addToProguard(keepBillingContent);
+  } catch(err) {
+    console.error(err)
   }
-  console.log('HAS_BILLING proguard set: ' + HAS_BILLING);
 };
