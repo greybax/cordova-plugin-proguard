@@ -24,7 +24,9 @@ You can read more about it on [ProGuard official website](https://www.guardsquar
 
 You can also to check out some [Android ProGuard snippets](https://github.com/krschultz/android-proguard-snippets)
 
-_**Please note**_: you should remove and re-add Android platform after changing `plugins/cordova-plugin-proguard/proguard-custom.txt`
+If you want to add rules to this `proguard-custom.txt`, please create your own `proguard-custom.txt` and add this to your projectroot folder. 
+Upon installing the proguard-plugin, the rules will be added to your project.
+Example rules for various situations will be in the commented section in the plugin `proguard-custom.txt`.
 
 ```
 ionic cordova platform rm android

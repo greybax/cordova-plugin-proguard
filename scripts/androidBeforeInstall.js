@@ -7,7 +7,7 @@ module.exports = function (ctx) {
   const pluginDir = ctx.opts.plugin.dir;
   const targetProguardFile = path.join(pluginDir, 'proguard-custom.txt');
   const projectProguardFile = path.join(projectRoot, 'proguard-custom.txt');
-  
+
   try {
     if (fs.existsSync(projectProguardFile)) {
       const data = fs.readFileSync(projectProguardFile, 'utf8');
@@ -17,6 +17,6 @@ module.exports = function (ctx) {
       console.log('No optional proguard-custom.txt found in projectRoot: ' + projectRoot);
     }
   } catch(err) {
-    console.error(err)
+    console.error(err);
   }
 };
