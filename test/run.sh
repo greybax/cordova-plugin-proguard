@@ -26,7 +26,7 @@ if [ "x$IAP_ID" = "x" ] || [ "x$1" = "x--help" ]; then
     echo "This will generate a cordova project using Cordova $TEST_VERSION (required)."
     echo
     echo "example:"
-    echo "    \$ $0 com.graybax.progplugintest progplugintest"
+    echo "    \$ $0 com.greybax.progplugintest progplugintest"
     echo
     exit 1
 fi
@@ -86,7 +86,7 @@ fi
 
 hasFile "$PROGUARD_CUSTOM_FILE"
 
-# nu nog een test of de twee customfiles zijn samengevoegd.
+# finally test if the extra rules are in place in the default proguard-custom.txt file
 EXTRA_RULES=$(<$CUSTOM_RULES)
 
 echo "Extra rules in proguard check"
