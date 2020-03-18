@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/greybax/cordova-plugin-proguard/issues"
   },
-  "homepage": "https://github.com/greybax/cordova-plugin-proguard#readme"
+  "homepage": "https://github.com/greybax/cordova-plugin-proguard#readme",
+  "devDependencies": {
+    "jshint": "^2.11.0"
+  }
 }
