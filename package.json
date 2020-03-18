@@ -28,6 +28,6 @@
   },
   "homepage": "https://github.com/greybax/cordova-plugin-proguard#readme",
   "devDependencies": {
-    "jshint": "^2.11.0"
+    "jshint": "2.11.0"
   }
 }
