@@ -23,7 +23,7 @@ You can read more about it on [ProGuard official website](https://www.guardsquar
 You can also to check out some [Android ProGuard snippets](https://github.com/krschultz/android-proguard-snippets)
 
 If you want to add rules to this `proguard-custom.txt`, please create your own `proguard-custom.txt` and add this to your projectroot folder. 
-Upon installing the proguard-plugin, the rules will be added to your project.
+Upon preparing the app, the rules will merged with the base file.
 Example rules for various situations will be in the commented section in the plugin `proguard-custom.txt`.
 
 ```
